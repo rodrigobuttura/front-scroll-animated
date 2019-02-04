@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll Animated</title>
+    <style>
+    body { margin: 0; padding: 0; }
+    .main-animation 
+    { 
+        position: relative; 
+    }
+    .animation 
+    {
+        opacity: 0;
+        transition: 1s all;
+        -webkit-transition: 1s all;
+    }
+    .animation.onload{ opacity: 1; }
+    
+    .cena2{ top: 0%; left: 50%; }
+    .cena3{ top: 40%; left: 40%; font-size: 0px }
+    .cena4{ top: 100%; left: 50%; }
+
+    .animation.onload.cena1,
+    .animation.onload.cena2,
+    .animation.onload.cena4
+    {
+        position: fixed;
+        top: 50%; left: 50%;
+    }
+    .animation.onload.cena3
+    {
+        top:50%; left: 50%;
+        font-size: 52px;
+        position: fixed;
+    }
+    .bground-example 
+    { 
+        background-image: url('image-example.jpg'); 
+        background-position: top left; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-size:cover;
+    }
+
+    </style>
+</head>
+<body>
+    
+
+<div class="main-animation" style="height: 1500px; background-color: purple; color: seashell">
+
+    <div class="animation cena1">
+   
+        <b> Cena 1 </b>
+
+    </div>
+
+</div>
+
+
+<div class="main-animation" style="height: 1800px; background-color: goldenrod; color: seashell">
+
+    <div class="animation cena2">
+     
+        <b> Cena 2 </b>
+     
+    </div>
+     
+</div>
+     
+
+
+<div class="main-animation bground-example" style="height: 1400px; color: seashell">
+
+    <div class="animation cena3">
+         
+        <b> Cena 3 </b>
+         
+    </div>
+         
+</div>
+
+
+
+<div class="main-animation" style="height:1400px; background-color: darkolivegreen; color: seashell">
+
+    <div class="animation cena4">
+         
+        <b> Cena 4 </b>
+         
+    </div>
+         
+</div>
+
+
+<script src="animejs.js"></script>
+<script>window.onload = initAnime()</script>
+
+</body>
+</html>
